@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB8C4CB41D84E51400AAF223 /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = AB8C4CB31D84E51400AAF223 /* htmlView.html */; };
 		ABDEB0FF1D80D36F00C8E6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEB0FE1D80D36F00C8E6CF /* AppDelegate.swift */; };
 		ABDEB1011D80D36F00C8E6CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDEB1001D80D36F00C8E6CF /* ViewController.swift */; };
 		ABDEB1041D80D36F00C8E6CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABDEB1021D80D36F00C8E6CF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB8C4CB31D84E51400AAF223 /* htmlView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 		ABDEB0FB1D80D36F00C8E6CF /* Web.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Web.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDEB0FE1D80D36F00C8E6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABDEB1001D80D36F00C8E6CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				ABDEB0FE1D80D36F00C8E6CF /* AppDelegate.swift */,
 				ABDEB1001D80D36F00C8E6CF /* ViewController.swift */,
 				ABDEB1021D80D36F00C8E6CF /* Main.storyboard */,
+				AB8C4CB31D84E51400AAF223 /* htmlView.html */,
 				ABDEB1051D80D36F00C8E6CF /* Assets.xcassets */,
 				ABDEB1071D80D36F00C8E6CF /* LaunchScreen.storyboard */,
 				ABDEB10A1D80D36F00C8E6CF /* Info.plist */,
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8C4CB41D84E51400AAF223 /* htmlView.html in Resources */,
 				ABDEB1091D80D36F00C8E6CF /* LaunchScreen.storyboard in Resources */,
 				ABDEB1061D80D36F00C8E6CF /* Assets.xcassets in Resources */,
 				ABDEB1041D80D36F00C8E6CF /* Main.storyboard in Resources */,
@@ -286,6 +290,7 @@
 				ABDEB10F1D80D36F00C8E6CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
