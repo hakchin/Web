@@ -56,6 +56,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         
     }
     @IBAction func btnLoadHtmlFile(sender: UIButton) {
+        let myHtmlBundle = NSBundle.mainBundle()
+        let filePath = myHtmlBundle.pathForResource("htmlView", ofType: "html")
+        loadWebPage(filePath!)
     }
     @IBAction func btnStop(sender: UIBarButtonItem) {
         wvwMy.stopLoading()
