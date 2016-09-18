@@ -16,9 +16,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var aivMyActivity: UIActivityIndicatorView!
     
-    func loadWebPage(url: String) {
-        let myUrl = NSURL(string: url)
-        let myRequest = NSURLRequest(URL: myUrl!)
+    func loadWebPage(_ url: String) {
+        let myUrl = URL(string: url)
+        let myRequest = URLRequest(url: myUrl!)
         wvwMy.loadRequest(myRequest)
     }
     
@@ -34,42 +34,51 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         aivMyActivity.startAnimating()
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         aivMyActivity.stopAnimating()
     }
-
-    @IBAction func btnGotoUrl(sender: UIButton) {
+    
+    func checkUrl(_ url: String) -> String {
+        var strUrl = url
+        let flag = strUrl.hasPrefix("http://")
+        if !flag {
+            strUrl = "http://" + strUrl
+        }
+        return strUrl
     }
-    @IBAction func btnGoSites1(sender: UIButton) {
+
+    @IBAction func btnGotoUrl(_ sender: UIButton) {
+    }
+    @IBAction func btnGoSites1(_ sender: UIButton) {
         loadWebPage("http://fallinmac.tistory.com")
     }
-    @IBAction func btnGoSite2(sender: UIButton) {
+    @IBAction func btnGoSite2(_ sender: UIButton) {
         loadWebPage("http://blog.2sam.net")
     }
-    @IBAction func btnLoadHtmlString(sender: UIButton) {
+    @IBAction func btnLoadHtmlString(_ sender: UIButton) {
         let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹페이지</p><p><a href=\"http://2sam.net\">2sam</a>으로 이동</p>"
         wvwMy.loadHTMLString(htmlString, baseURL: nil)
         
     }
-    @IBAction func btnLoadHtmlFile(sender: UIButton) {
-        let myHtmlBundle = NSBundle.mainBundle()
-        let filePath = myHtmlBundle.pathForResource("htmlView", ofType: "html")
+    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
+        let myHtmlBundle = Bundle.main
+        let filePath = myHtmlBundle.path(forResource: "htmlView", ofType: "html")
         loadWebPage(filePath!)
     }
-    @IBAction func btnStop(sender: UIBarButtonItem) {
+    @IBAction func btnStop(_ sender: UIBarButtonItem) {
         wvwMy.stopLoading()
     }
-    @IBAction func btnReload(sender: UIBarButtonItem) {
+    @IBAction func btnReload(_ sender: UIBarButtonItem) {
         wvwMy.reload()
     }
-    @IBAction func btnGoBack(sender: UIBarButtonItem) {
+    @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
         wvwMy.goBack()
     }
-    @IBAction func btnGoForward(sender: UIBarButtonItem) {
+    @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
         wvwMy.goForward()
     }
 
