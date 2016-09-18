@@ -52,6 +52,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
 
     @IBAction func btnGotoUrl(_ sender: UIButton) {
+        let myUrl = checkUrl(txtUrl.text!)
+        txtUrl.text! = ""
+        loadWebPage(myUrl)
     }
     @IBAction func btnGoSites1(_ sender: UIButton) {
         loadWebPage("http://fallinmac.tistory.com")
